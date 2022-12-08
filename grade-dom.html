@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Object-of-Object</title>
+	<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="container">
+			<input type="number" id="mark" placeholder="Enter your mark">
+			<h2 id="res"></h2>
+			<button type="button" id="btn">Check Your Grade</button>
+		</div>
+	<script>
+		
+		let but=document.getElementById("btn");
+		but.addEventListener("click",myFun);
+		function myFun(){
+		var a=document.getElementById("mark").value;
+		if(a>=80){
+			document.getElementById("res").innerHTML="A Grade";
+		}
+		else if(a>=60 && a<80){
+			document.getElementById("res").innerHTML="B Grade";
+		}
+		else if(a>=50 && a<60){
+			document.getElementById("res").innerHTML="C Grade";
+		}
+		else if(a>=45 && a<50){
+			document.getElementById("res").innerHTML="D Grade";
+		}
+		else if(a>=25 && a<45){
+			document.getElementById("res").innerHTML="E Grade";
+		}
+		else{
+			document.getElementById("res").innerHTML="You are Fail";
+		}
+		}
+	</script>
+	</body>
+</html>
